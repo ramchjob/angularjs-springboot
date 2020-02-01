@@ -1,0 +1,79 @@
+<html ng-app="UserManagement">
+<head>
+<meta charset="utf-8" />
+<title>AngularJS - REST Demo using $http service</title>
+<!-- Load AngularJS -->
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js">
+	</script>
+<script src="scripts/employee.js">
+	
+</script>
+<style>
+		.button {
+			cursor: pointer;
+			color: blue;
+		}
+		
+		td, th {
+			border: 1px solid gray;
+			width: 25%;
+			text-align: left;
+		}
+		
+		table {
+			width: 600px;
+		}
+</style>
+<head>
+<body ng-controller="UserManagementController">
+	<h1>AngularJS - Use $http to invoke RESTful APIs</h1>
+
+	<table>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Actions</th>
+		</tr>
+
+		<tr ng-repeat="employee in employees">
+			<td>{{ employee.firstName }}</td>
+			<td>{{ employee.lastName }}</td>
+			<td>{{ employee.email }}</td>
+			<td><a ng-click="editEmployee( employee )" class="button">Edit</a>
+				| <a ng-click="removeEmployee( employee )" class="button">Remove</a></td>
+		</tr>
+
+	</table>
+
+	<h2>Add/Edit Employee</h2>
+
+	<form class="employee-form" ng-submit="submitEmployee()">
+		<table>
+			<tr>
+				<td>First Name</td>
+				<td><input ng-class="[]" type="text" ng-model="form.firstName"
+					name="firstName" size="60" required placeholder="Enter your first name"/></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" ng-model="form.lastName" name="lastName"
+					size="60" required placeholder="Enter your last name" /></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" ng-model="form.email" name="email" size="60" required size="60" required placeholder="Enter your email"/>
+				
+				<span class="help-inline" ng-show="submitted && form.email.$error.required">Required</span>
+                <span class="help-inline" ng-show="submitted && form.email.$error.email">Invalid email</span>
+				
+			</td>
+			</tr>
+			
+		</table>
+			<button type="submit" class="btn btn-primary btn-large" ng-click="submitted=true" ng-disabled=form.$valid>Submit</button>
+			<label>FirstName : {{form.firstName}}</label>
+	</form>
+</body>
+</html>
