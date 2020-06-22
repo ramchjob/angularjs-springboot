@@ -17,3 +17,8 @@ Kafka Steps:
 8. Publish message to kafka topic "customer_event"
 
 8. Watch the messages "kafka-console-consumer --bootstrap-server localhost:9092 --topic customer_event --from-beginning"
+
+
+Sample Pay Load: 
+
+{  "id": 3,   "firstName": "Ram",     "lastName": "Ch",     "email": "ramch@gmail.com",          "dept_id": 1 }

@@ -29,19 +29,20 @@ public class EmployeeEntity {
     @Column(name="email", nullable=false, length=200)
     private String email;
     
-    @OneToOne
-    @JoinColumn(name="dept_id")
-    private DepartmentEntity department;
+    @JoinColumn(name="dept_id") 
+    private Integer department;
     
-    
-    public DepartmentEntity getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(DepartmentEntity department) {
-        this.department = department;
-    }
-
+    /*
+     * @OneToOne
+     * 
+     * @JoinColumn(name="dept_id") private DepartmentEntity department;
+     * 
+     * 
+     * public DepartmentEntity getDepartment() { return department; }
+     * 
+     * public void setDepartment(DepartmentEntity department) { this.department =
+     * department; }
+     */
     public Long getId() {
 		return id;
 	}
