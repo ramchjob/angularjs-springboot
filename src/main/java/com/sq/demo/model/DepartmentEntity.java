@@ -23,8 +23,9 @@ public class DepartmentEntity {
     @Column(name="dept_desc")
     private String deptDesc;
 
-    @OneToOne(mappedBy="department")
-    private EmployeeEntity employee;
+    /*
+     * @OneToOne(mappedBy="department") private EmployeeEntity employee;
+     */
     
     public Long getDept_id() {
         return dept_id;
