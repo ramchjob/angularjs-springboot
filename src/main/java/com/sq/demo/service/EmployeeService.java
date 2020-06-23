@@ -9,14 +9,22 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sq.demo.exception.RecordNotFoundException;
+import com.sq.demo.kafka.CustomerEventProducer;
 import com.sq.demo.model.EmployeeEntity;
 import com.sq.demo.repository.EmployeeRepository;
+
+import lombok.extern.slf4j.Slf4j;
+
  
 @Service
+@Slf4j
 public class EmployeeService {
      
     @Autowired
     EmployeeRepository repository;
+    
+    @Autowired
+    CustomerEventProducer producer;
      
     public List<EmployeeEntity> getAllEmployees()
     {
@@ -50,7 +58,10 @@ public class EmployeeService {
      
     public EmployeeEntity createOrUpdateEmployee(EmployeeEntity entity) throws RecordNotFoundException, JsonProcessingException
     {
-        Optional<EmployeeEntity> employee = repository.findById(entity.getId());
+        Optional<EmployeeEntity> employee = Optional.empty();
+        if (null != entity.getId()) {
+            employee = repository.findById(entity.getId());
+        }
          
         if(employee.isPresent())
         {
@@ -61,11 +72,14 @@ public class EmployeeService {
  
             newEntity = repository.save(newEntity);
              
-            
+            producer.processMessage(newEntity);
             return newEntity;
         } else {
             entity = repository.save(entity);
              
+            
+            producer.processMessage(entity);            
+            log.debug("Published the employee event to customer event topic");
             
             return entity;
         }

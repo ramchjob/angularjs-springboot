@@ -13,5 +13,4 @@ CREATE TABLE TBL_EMPLOYEES (
   last_name VARCHAR(250) NOT NULL,
   email VARCHAR(250) DEFAULT NULL,
   dept_id INT,
-  foreign key (dept_id) references TBL_DEPT(dept_id)
 );
