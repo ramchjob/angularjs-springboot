@@ -30,7 +30,7 @@ import com.sq.demo.model.EmployeeEntity;
 import com.sq.demo.service.EmployeeService;
  
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("/employee")
 @Validated
 public class EmployeeController
 {
