@@ -1,4 +1,4 @@
-package com.sq.demo.service;
+package com.ram.learn.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.sq.demo.exception.RecordNotFoundException;
-import com.sq.demo.kafka.CustomerEventProducer;
-import com.sq.demo.model.EmployeeEntity;
-import com.sq.demo.repository.EmployeeRepository;
+import com.ram.learn.exception.RecordNotFoundException;
+import com.ram.learn.kafka.CustomerEventProducer;
+import com.ram.learn.model.EmployeeEntity;
+import com.ram.learn.repository.EmployeeRepository;
 
 import lombok.extern.slf4j.Slf4j;
 

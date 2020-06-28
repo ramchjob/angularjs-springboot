@@ -1,4 +1,4 @@
-package com.sq.demo.repository;
+package com.ram.learn.repository;
 
 
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.sq.demo.model.EmployeeEntity;
+import com.ram.learn.model.EmployeeEntity;
  
 @Repository
 public interface EmployeeRepository

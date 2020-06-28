@@ -1,5 +1,5 @@
 
-package com.sq.demo.kafka;
+package com.ram.learn.kafka;
 
 import java.io.IOException;
 
@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sq.demo.exception.RecordNotFoundException;
-import com.sq.demo.model.EmployeeEntity;
-import com.sq.demo.service.EmployeeService;
+import com.ram.learn.exception.RecordNotFoundException;
+import com.ram.learn.model.EmployeeEntity;
+import com.ram.learn.service.EmployeeService;
 
 @Component
 public class CustomerEventConsumer {

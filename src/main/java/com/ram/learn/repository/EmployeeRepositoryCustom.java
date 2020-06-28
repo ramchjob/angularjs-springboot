@@ -1,8 +1,8 @@
-package com.sq.demo.repository;
+package com.ram.learn.repository;
 
 import java.util.List;
 
-import com.sq.demo.model.EmployeeEntity;
+import com.ram.learn.model.EmployeeEntity;
 
 public interface EmployeeRepositoryCustom {
    List<EmployeeEntity>  getEmployeeswithByName(String name);

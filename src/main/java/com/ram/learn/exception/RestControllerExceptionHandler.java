@@ -1,4 +1,4 @@
-package com.sq.demo.exception;
+package com.ram.learn.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

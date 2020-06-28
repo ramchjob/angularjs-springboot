@@ -1,4 +1,4 @@
-package com.sq.demo.repository;
+package com.ram.learn.repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import javax.persistence.criteria.Root;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.sq.demo.model.EmployeeEntity;
+import com.ram.learn.model.EmployeeEntity;
 
 @Repository
 public class EmployeeRepositoryImpl implements EmployeeRepositoryCustom {

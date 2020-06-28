@@ -1,4 +1,4 @@
-package com.sq.demo.model;
+package com.ram.learn.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

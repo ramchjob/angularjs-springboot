@@ -1,4 +1,4 @@
-package com.sq.demo.web;
+package com.ram.learn.web;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,7 +10,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,9 +24,9 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sq.demo.exception.RecordNotFoundException;
-import com.sq.demo.model.EmployeeEntity;
-import com.sq.demo.service.EmployeeService;
+import com.ram.learn.exception.RecordNotFoundException;
+import com.ram.learn.model.EmployeeEntity;
+import com.ram.learn.service.EmployeeService;
  
 @RestController
 @RequestMapping("/employee")
