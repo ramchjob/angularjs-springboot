@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-@ControllerAdvice(basePackages = "com.sq.demo")
+@ControllerAdvice(basePackages = "com.ram.learn")
 public class RestControllerExceptionHandler extends ResponseEntityExceptionHandler{
 
     @ExceptionHandler({Exception.class})
